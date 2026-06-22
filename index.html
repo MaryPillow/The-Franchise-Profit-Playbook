@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Franchise Profit Playbook | Mary Pillow Thompson</title>
+  <meta name="description" content="Franchise operators: stop repairing and start building. The Franchise Profit Playbook gives you the clarity, execution, and feedback systems that turn grinding locations into scaling machines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Tokens ─────────────────────────────────────────── */
+    :root {
+      --black:   #1a1a1a;
+      --gold:    #C9A84C;
+      --gold-lt: #e8c96a;
+      --cream:   #f5f0e8;
+      --cream-dk:#ede7d9;
+      --white:   #ffffff;
+      --gray:    #6b6b6b;
+      --gray-lt: #f0ede8;
+      --serif:   'Playfair Display', Georgia, serif;
+      --sans:    'Inter', system-ui, sans-serif;
+    }
+
+    /* ─── Reset ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--black); background: var(--white); line-height: 1.6; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── Typography helpers ─────────────────────────────── */
+    .serif { font-family: var(--serif); }
+    .gold   { color: var(--gold); }
+
+    h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.15; }
+
+    /* ─── Buttons ────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--black);
+      border: 2px solid var(--gold);
+    }
+    .btn-gold:hover { background: var(--gold-lt); border-color: var(--gold-lt); }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+    .btn-outline-white:hover { background: var(--white); color: var(--black); }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--black);
+      border: 2px solid var(--black);
+    }
+    .btn-outline-dark:hover { background: var(--black); color: var(--white); }
+
+    .btn-dark {
+      background: var(--black);
+      color: var(--white);
+      border: 2px solid var(--black);
+    }
+    .btn-dark:hover { background: #333; border-color: #333; }
+
+    /* ─── Layout helpers ─────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+
+    .label {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    /* ─── NAV ────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--white);
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .nav-logo span { color: var(--gold); font-style: italic; display: block; font-size: 0.8rem; font-weight: 400; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--black);
+      padding: 9px 20px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+    .nav-links .nav-cta:hover { background: var(--gold-lt); color: var(--black); }
+
+    /* hamburger */
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+    .nav-mobile { display: none; background: var(--black); border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 24px 24px; }
+    .nav-mobile a { display: block; color: rgba(255,255,255,0.8); font-size: 0.9rem; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); letter-spacing: 0.05em; }
+    .nav-mobile a:last-child { border-bottom: none; color: var(--gold); font-weight: 600; }
+    .nav-mobile.open { display: block; }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      background: var(--black);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: center;
+      min-height: 88vh;
+      padding: 80px 0 80px 48px;
+    }
+    .hero-text {}
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .hero-headline {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      color: var(--white);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .hero-headline em { color: var(--gold); font-style: italic; }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-image-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .hero-photo {
+      width: 320px;
+      height: 400px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 4px;
+      box-shadow: 0 32px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.3);
+    }
+    .hero-photo-placeholder {
+      width: 320px;
+      height: 400px;
+      background: rgba(255,255,255,0.05);
+      border: 2px dashed rgba(201,168,76,0.4);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.8rem;
+      text-align: center;
+      gap: 8px;
+    }
+    .hero-book-mini {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 4px;
+      padding: 16px 24px;
+      text-align: center;
+      width: 320px;
+    }
+    .hero-book-mini p {
+      font-family: var(--serif);
+      font-style: italic;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .hero-book-mini strong { color: var(--gold); font-style: normal; font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+
+    /* ─── PAIN / EMPATHY ─────────────────────────────────── */
+    .pain { background: var(--cream); }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 56px;
+    }
+    .pain-card {
+      background: var(--white);
+      padding: 36px 28px;
+      border-top: 3px solid var(--gold);
+    }
+    .pain-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+    .pain-card p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .pain-icon { font-size: 1.8rem; margin-bottom: 16px; }
+    .pain-bottom {
+      margin-top: 56px;
+      text-align: center;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pain-bottom p {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--black);
+      line-height: 1.6;
+    }
+    .pain-bottom strong { font-style: normal; color: var(--gold); }
+
+    /* ─── BOOK SECTION ───────────────────────────────────── */
+    .book { background: var(--white); }
+    .book-inner {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .book-cover {
+      background: var(--black);
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 4px;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: 8px 8px 32px rgba(0,0,0,0.15);
+      position: relative;
+    }
+    .book-cover::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(201,168,76,0.25);
+      pointer-events: none;
+    }
+    .book-cover-title {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .book-cover-sub {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .book-cover-divider {
+      width: 64px;
+      height: 1px;
+      background: rgba(201,168,76,0.6);
+      margin: 16px auto;
+    }
+    .book-cover-edition {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .book-cover-author {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .book-content h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-bottom: 20px;
+    }
+    .book-content > p {
+      font-size: 1rem;
+      color: var(--gray);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .chapter-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      margin-bottom: 36px;
+    }
+    .chapter-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--black);
+      line-height: 1.4;
+    }
+    .chapter-item::before {
+      content: '→';
+      color: var(--gold);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .book-cta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .book-note { font-size: 0.78rem; color: var(--gray); font-style: italic; }
+
+    /* ─── FRAMEWORK ──────────────────────────────────────── */
+    .framework { background: var(--black); }
+    .framework-intro {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .framework-intro h2 { color: var(--white); font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 16px; }
+    .framework-intro p { color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.7; }
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .fw-card {
+      background: rgba(255,255,255,0.04);
+      padding: 48px 36px;
+      border-top: 3px solid var(--gold);
+      transition: background 0.2s;
+    }
+    .fw-card:hover { background: rgba(255,255,255,0.07); }
+    .fw-num {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-style: italic;
+      color: rgba(201,168,76,0.25);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .fw-card h3 {
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .fw-card p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .fw-tagline {
+      text-align: center;
+      margin-top: 48px;
+      font-family: var(--serif);
+      font-style: italic;
+      color: rgba(255,255,255,0.4);
+      font-size: 1rem;
+    }
+    .fw-tagline strong { color: var(--gold); font-style: normal; }
+
+    /* ─── PULL QUOTES ────────────────────────────────────── */
+    .quotes { background: var(--cream-dk); }
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .quote-card {
+      background: var(--white);
+      padding: 40px 32px;
+      position: relative;
+    }
+    .quote-mark {
+      font-family: var(--serif);
+      font-size: 5rem;
+      color: var(--gold);
+      opacity: 0.2;
+      line-height: 0.8;
+      position: absolute;
+      top: 20px;
+      left: 24px;
+    }
+    .quote-card blockquote {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--black);
+      line-height: 1.65;
+      position: relative;
+      z-index: 1;
+    }
+    .quote-source {
+      margin-top: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── ABOUT ──────────────────────────────────────────── */
+    .about { background: var(--white); }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-photo-wrap { position: relative; }
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 4px;
+    }
+    .about-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: var(--cream);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--gray);
+      text-align: center;
+      padding: 24px;
+      border: 2px dashed var(--cream-dk);
+    }
+    .about-accent {
+      position: absolute;
+      bottom: -16px;
+      right: -16px;
+      width: 120px;
+      height: 120px;
+      background: var(--gold);
+      z-index: -1;
+      border-radius: 2px;
+    }
+    .about-text h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 8px; }
+    .about-text .about-title {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+    .about-text p {
+      font-size: 0.97rem;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .about-text p strong { color: var(--black); }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+      padding: 28px 0;
+      border-top: 1px solid var(--cream-dk);
+      border-bottom: 1px solid var(--cream-dk);
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    /* ─── COURSES ────────────────────────────────────────── */
+    .courses { background: var(--cream); }
+    .courses-intro {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 56px;
+    }
+    .courses-intro h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 16px; }
+    .courses-intro p { color: var(--gray); font-size: 0.97rem; line-height: 1.7; }
+
+    .course-featured {
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+    }
+    .course-featured-header {
+      background: var(--black);
+      padding: 40px 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+    .course-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+    .course-featured-header h3 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .course-featured-header p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      max-width: 520px;
+    }
+    .course-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .course-meta-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 4px;
+      padding: 12px 20px;
+      min-width: 110px;
+    }
+    .course-meta-num {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .course-meta-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-top: 3px;
+    }
+
+    .course-modules {
+      padding: 40px 48px;
+      border-bottom: 1px solid var(--cream-dk);
+    }
+    .course-modules-title {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .module-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px;
+      background: var(--cream);
+      border-radius: 2px;
+    }
+    .module-num {
+      font-family: var(--serif);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: var(--black);
+      border-radius: 2px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .module-text strong {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 2px;
+    }
+    .module-text span {
+      font-size: 0.78rem;
+      color: var(--gray);
+    }
+
+    .course-footer {
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .course-includes-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .course-includes-row li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.82rem;
+      color: var(--gray);
+    }
+    .course-includes-row li::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+    /* ─── WORK WITH ME ───────────────────────────────────── */
+    .workwithme { background: var(--black); }
+    .wwm-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .wwm-text h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .wwm-text h2 em { color: var(--gold); }
+    .wwm-text p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.97rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .wwm-text p strong { color: var(--white); }
+    .wwm-text .btn { margin-top: 12px; }
+    .wwm-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 4px;
+      padding: 48px 40px;
+    }
+    .wwm-card h3 {
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .wwm-card .wwm-card-sub {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .wwm-card p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .wwm-list li {
+      display: flex;
+      gap: 12px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.88rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .wwm-list li:last-child { border-bottom: none; }
+    .wwm-list li::before { content: '→'; color: var(--gold); flex-shrink: 0; }
+    .wwm-card .btn-gold { margin-top: 28px; width: 100%; text-align: center; }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────── */
+    .testimonials { background: var(--white); }
+    .test-intro {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 56px;
+    }
+    .test-intro h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 12px; }
+    .test-intro p { color: var(--gray); font-size: 0.95rem; }
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .test-card {
+      border: 1px solid var(--cream-dk);
+      padding: 36px 28px;
+      border-radius: 2px;
+    }
+    .test-stars {
+      color: var(--gold);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .test-card blockquote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.97rem;
+      color: var(--black);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .test-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .test-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--cream-dk);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .test-name {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--black);
+    }
+    .test-role {
+      font-size: 0.78rem;
+      color: var(--gray);
+    }
+
+    /* ─── FINAL CTA ──────────────────────────────────────── */
+    .final-cta {
+      background: var(--gold);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: var(--black);
+      margin-bottom: 16px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .final-cta p {
+      font-size: 1rem;
+      color: rgba(26,26,26,0.7);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .final-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    footer {
+      background: #111;
+      padding: 48px 0 32px;
+      color: rgba(255,255,255,0.45);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--white);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .footer-logo span {
+      display: block;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p { font-size: 0.78rem; }
+
+    /* ─── Section headers shared ─────────────────────────── */
+    .section-header { text-align: center; max-width: 620px; margin: 0 auto 56px; }
+    .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 14px; }
+    .section-header p { color: var(--gray); font-size: 0.97rem; line-height: 1.7; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 60px 0 48px;
+      }
+      .hero-image-wrap { order: -1; }
+      .hero-photo, .hero-photo-placeholder { width: 100%; max-width: 320px; margin: 0 auto; }
+      .hero-book-mini { width: 100%; max-width: 320px; margin: 0 auto; }
+
+      .pain-grid { grid-template-columns: 1fr; }
+      .book-inner { grid-template-columns: 1fr; }
+      .book-cover { max-width: 280px; }
+      .framework-grid { grid-template-columns: 1fr; gap: 1px; }
+      .quotes-grid { grid-template-columns: 1fr; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-accent { display: none; }
+      .about-photo { max-width: 320px; }
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
+      .courses-grid { grid-template-columns: 1fr; }
+      .wwm-inner { grid-template-columns: 1fr; }
+      .test-grid { grid-template-columns: 1fr; }
+      .chapter-list { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 540px) {
+      .hero-ctas { flex-direction: column; }
+      .about-stats { grid-template-columns: 1fr; gap: 20px; }
+      .final-cta-btns { flex-direction: column; align-items: center; }
+      .section { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════════════════════════ -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#top" class="nav-logo">
+      The Franchise<span>Profit Playbook</span>
+    </a>
+    <div class="nav-links">
+      <a href="#book">Book</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#workwithme">Work With Me</a>
+      <a href="#workwithme" class="nav-cta">Book a Call</a>
+    </div>
+    <div class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#book" onclick="toggleNav()">The Book</a>
+    <a href="#courses" onclick="toggleNav()">Courses</a>
+    <a href="#about" onclick="toggleNav()">About Mary</a>
+    <a href="#workwithme" onclick="toggleNav()">Work With Me</a>
+    <a href="#workwithme" onclick="toggleNav()">Book a Revenue Gap Call →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ══════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Franchise Consulting &amp; Change Management</p>
+      <h1 class="hero-headline">
+        You're working hard.<br>
+        Your results should<br>
+        <em>match the effort.</em>
+      </h1>
+      <p class="hero-sub">
+        The gap between effort and outcome is exactly what The Franchise Profit Playbook is built to close — through operational clarity, not more hours, more staff, or more spend.
+      </p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-gold">Get the Playbook</a>
+        <a href="#workwithme" class="btn btn-outline-white">Book a Revenue Gap Call</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <!-- Replace "headshot.jpg" with your photo file name in the same folder -->
+      <img
+        src="headshot.jpg"
+        alt="Mary Pillow Thompson"
+        class="hero-photo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <div class="hero-photo-placeholder" style="display:none;">
+        <span>📷</span>
+        <span>Place headshot.jpg<br>in this folder</span>
+      </div>
+      <div class="hero-book-mini">
+        <strong>Mary Pillow Thompson</strong>
+        <p>"Not consulting from the outside — running stores, managing schedules, sitting with P&amp;Ls."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PAIN ══════════════════════════════════ -->
+<section class="section pain">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Sound familiar?</span>
+      <h2>You're not failing.<br>You're operating without a scoreboard.</h2>
+      <p>Most franchise operators are working as hard as anyone in the industry. The problem isn't effort. It's that the game they're running doesn't give their team what it needs to win.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">📋</div>
+        <h3>The same problems keep cycling</h3>
+        <p>Turnover that never stabilizes. Inconsistent performance across locations. Managers burning out. Owners running on adrenaline. And the fix is always the same — work harder, add more tools.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🔧</div>
+        <h3>Drowning in tools, starved of clarity</h3>
+        <p>POS reports nobody reads. Scheduling platforms that output schedules but not insight. Text chains between managers. Information overload is not the same as operational clarity.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🎯</div>
+        <h3>Your team doesn't know the score</h3>
+        <p>Most employees walk into a shift without knowing the sales target. They can't see whether they're winning or losing. You'd never play a sport without a scoreboard — so why run a store that way?</p>
+      </div>
+    </div>
+    <div class="pain-bottom">
+      <p>"The operators who consistently outperform their peers were not working more hours.<br><strong>They were operating with clarity.</strong>"</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BOOK ═══════════════════════════════════ -->
+<section class="section book" id="book">
+  <div class="container">
+    <div class="book-inner">
+      <div>
+        <div class="book-cover">
+          <div class="book-cover-title">The<br>Franchise</div>
+          <div class="book-cover-sub">Profit Playbook</div>
+          <div class="book-cover-divider"></div>
+          <div class="book-cover-edition">The Compiled Edition</div>
+          <div class="book-cover-author">Mary Pillow Thompson</div>
+        </div>
+      </div>
+      <div class="book-content">
+        <span class="label">The Book</span>
+        <h2>The operating system your franchise has been missing.</h2>
+        <p>
+          This is not an academic text. It is operational — drawn from years of running stores, managing schedules, and watching what actually separates growing locations from grinding ones. Every chapter addresses a real problem franchise operators face and gives you a real framework for solving it.
+        </p>
+        <p style="color: var(--black); font-weight: 500; font-size: 0.95rem; margin-bottom: 20px;">What you'll find inside:</p>
+        <ul class="chapter-list">
+          <li class="chapter-item">Why your people aren't the problem — the game is</li>
+          <li class="chapter-item">How to build culture through visibility, not speeches</li>
+          <li class="chapter-item">The tool overload trap and how to escape it</li>
+          <li class="chapter-item">Stop repairing. Start building a new operating identity</li>
+          <li class="chapter-item">The 3-part flywheel behind every winning store</li>
+          <li class="chapter-item">What operational intelligence actually looks like</li>
+          <li class="chapter-item">A new level of performance — available right now</li>
+          <li class="chapter-item">Real results: turnover down, revenue up, no new hires</li>
+        </ul>
+        <div class="book-cta-row">
+          <a href="#" class="btn btn-gold">Get the Playbook →</a>
+          <p class="book-note">Nothing inside requires more staff, more hours, or more money.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FRAMEWORK ════════════════════════════ -->
+<section class="section framework" id="framework">
+  <div class="container">
+    <div class="framework-intro">
+      <span class="label">The Method</span>
+      <h2>The three-part flywheel behind every winning store.</h2>
+      <p>High-performing franchise operators don't rely on memory, hustle, or hope. They run on a three-part system. When all three are present and running together, performance becomes predictable and scalable.</p>
+    </div>
+    <div class="framework-grid">
+      <div class="fw-card">
+        <div class="fw-num">01</div>
+        <h3>Clarity</h3>
+        <p>Make winning visible. Teams perform best when they know the goal, the target, the current pacing, and the next required action. Without it, your best employees are guessing. With it, average employees start producing like strong ones.</p>
+      </div>
+      <div class="fw-card">
+        <div class="fw-num">02</div>
+        <h3>Execution</h3>
+        <p>Make behavior consistent. Checklists, tasks, and expectations must be simplified and visible — not buried in a system nobody checks. Execution stops being reactive and becomes predictable when your team has a clear playbook for every shift.</p>
+      </div>
+      <div class="fw-card">
+        <div class="fw-num">03</div>
+        <h3>Feedback</h3>
+        <p>Make progress rewarding. Recognition, visibility, and the experience of forward momentum are the most powerful retention tools available. When employees can see their progress connecting to something real, they bring a different level of energy.</p>
+      </div>
+    </div>
+    <p class="fw-tagline">The flywheel is simple: <strong>Clarity. Execution. Feedback.</strong> All three. Always.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ PULL QUOTES ══════════════════════════ -->
+<section class="section quotes">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">From the Playbook</span>
+      <h2>Once you see it, you cannot unsee it.</h2>
+    </div>
+    <div class="quotes-grid">
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <blockquote>Your people are not the problem. The game they are being asked to play is.</blockquote>
+        <p class="quote-source">Chapter One</p>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <blockquote>Culture is what your team experiences every day through what they can see. Culture built on visibility becomes repeatable. And once it is repeatable, it becomes scalable.</blockquote>
+        <p class="quote-source">Chapter Two</p>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <blockquote>People do not fail because they are incapable. They fail because the system they are operating in is invisible.</blockquote>
+        <p class="quote-source">Chapter Five</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ABOUT ═════════════════════════════════ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-photo-wrap">
+        <img
+          src="headshot.jpg"
+          alt="Mary Pillow Thompson"
+          class="about-photo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="about-photo-placeholder" style="display:none;">
+          Place headshot.jpg in this folder
+        </div>
+        <div class="about-accent"></div>
+      </div>
+      <div class="about-text">
+        <span class="label">About</span>
+        <h2>Mary Pillow Thompson</h2>
+        <p class="about-title">Franchise Consultant · Author · Change Management Specialist</p>
+        <p>
+          I have spent years working <strong>inside</strong> franchise operations — not consulting from the outside. Running stores, managing schedules, sitting with P&amp;Ls, and watching what actually separates the locations that grow from the ones that grind.
+        </p>
+        <p>
+          What I found wasn't what I expected. The operators who consistently outperformed their peers were not working more hours or running fancier promotions. <strong>They were operating with clarity.</strong>
+        </p>
+        <p>
+          The Franchise Profit Playbook is the compiled version of what I've learned, applied, and watched work across multiple locations and multiple brands. None of it is academic. All of it is operational — designed to install into your stores today, with the team you already have.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-num">Multi</div>
+            <div class="stat-label">Brand Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">7</div>
+            <div class="stat-label">Playbook Chapters</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">1</div>
+            <div class="stat-label">Operating Flywheel</div>
+          </div>
+        </div>
+        <a href="#workwithme" class="btn btn-dark">Work With Mary Pillow →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COURSES ═══════════════════════════════ -->
+<section class="section courses" id="courses">
+  <div class="container">
+    <div class="courses-intro">
+      <span class="label">The Signature Course</span>
+      <h2>Six weeks. One operating transformation.</h2>
+      <p>The Franchise Profit Playbook course takes you through the complete Clarity–Execution–Feedback system — week by week, module by module — with frameworks you can install in your stores immediately.</p>
+    </div>
+
+    <div class="course-featured">
+      <!-- Header -->
+      <div class="course-featured-header">
+        <div>
+          <div class="course-badge">6-Week Operator Course</div>
+          <h3>The Franchise Profit Playbook</h3>
+          <p>A practical, operator-focused program built from real experience running stores across multiple brands. No theory. No fluff. Just the systems that actually move revenue, reduce turnover, and let you scale without burning out.</p>
+        </div>
+        <div class="course-meta">
+          <div class="course-meta-item">
+            <div class="course-meta-num">6</div>
+            <div class="course-meta-label">Weeks</div>
+          </div>
+          <div class="course-meta-item">
+            <div class="course-meta-num">6</div>
+            <div class="course-meta-label">Modules</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module list -->
+      <div class="course-modules">
+        <p class="course-modules-title">What's inside — 6 modules</p>
+        <div class="modules-grid">
+          <div class="module-item">
+            <div class="module-num">01</div>
+            <div class="module-text">
+              <strong>Define the Winnable Game</strong>
+              <span>Stop Guessing, Start Seeing</span>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-num">02</div>
+            <div class="module-text">
+              <strong>From Report Card to Real-Time Control</strong>
+              <span>See what's happening now — not yesterday</span>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-num">03</div>
+            <div class="module-text">
+              <strong>From Seeing to Acting</strong>
+              <span>Turn visibility into consistent execution</span>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-num">04</div>
+            <div class="module-text">
+              <strong>Driving Behavior with Incentives</strong>
+              <span>Build the recognition loops that retain teams</span>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-num">05</div>
+            <div class="module-text">
+              <strong>Running Your Store with Zignyl</strong>
+              <span>Operational intelligence, applied in practice</span>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-num">06</div>
+            <div class="module-text">
+              <strong>You Know How to Run a Profitable Store</strong>
+              <span>Install the full flywheel and scale it</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer / CTA -->
+      <div class="course-footer">
+        <ul class="course-includes-row">
+          <li>6 weekly modules</li>
+          <li>Real frameworks to install immediately</li>
+          <li>Built for franchise operators</li>
+          <li>No new staff or spend required</li>
+        </ul>
+        <a href="#" class="btn btn-gold">Join the Waitlist →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WORK WITH ME ══════════════════════════ -->
+<section class="section workwithme" id="workwithme">
+  <div class="container">
+    <div class="wwm-inner">
+      <div class="wwm-text">
+        <span class="label">Consulting</span>
+        <h2>Ready to see what's <em>actually</em> leaking from your operation?</h2>
+        <p>I work directly with franchise operators and multi-unit owners who are ready to stop managing against problems and start building toward the operating reality they actually want.</p>
+        <p>This is not abstract strategy. <strong>I'll sit with your numbers, your structure, and your team dynamic</strong> — and tell you exactly where the margin is going and what to close first.</p>
+        <p>No pitch decks. No 90-day engagement required to get started. Just a direct conversation about your stores and what's possible right now.</p>
+      </div>
+      <div class="wwm-card">
+        <h3>Revenue Gap Call</h3>
+        <p class="wwm-card-sub">Free · 20 Minutes · No Pitch</p>
+        <p>
+          A direct, no-fluff conversation about where your operation is leaking margin and what to address first. If it's a fit to work together further, we'll talk about it. If it's not, you leave with clarity you didn't have before.
+        </p>
+        <ul class="wwm-list">
+          <li>Identify your top operational leak</li>
+          <li>Get one thing to implement immediately</li>
+          <li>Understand what the Playbook looks like in your stores</li>
+          <li>No sales pressure, no follow-up pitch</li>
+        </ul>
+        <a href="#" class="btn btn-gold">Book Your 20 Minutes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ══════════════════════════ -->
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="test-intro">
+      <span class="label">Operator Results</span>
+      <h2>What happens when the game becomes clear.</h2>
+      <p>Franchise operators who installed the Playbook frameworks — with the teams they already had.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <blockquote>"[Your testimonial here — what changed in your operation after working with Mary or reading the Playbook.]"</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">A</div>
+          <div>
+            <div class="test-name">Operator Name</div>
+            <div class="test-role">Multi-Unit Franchisee · [Brand]</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <blockquote>"[Your testimonial here — specific results, numbers, or transformation the operator experienced.]"</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">B</div>
+          <div>
+            <div class="test-name">Operator Name</div>
+            <div class="test-role">Franchise Owner · [Brand]</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <blockquote>"[Your testimonial here — what the operator would say to someone considering the Playbook or working with Mary.]"</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">C</div>
+          <div>
+            <div class="test-name">Operator Name</div>
+            <div class="test-role">Regional Director · [Brand]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FINAL CTA ════════════════════════════ -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Start with one location.<br>Install one piece of the flywheel.<br>Watch what happens.</h2>
+    <p>A new level of performance is available to you — not someday, with the stores you already have and the team you already employ.</p>
+    <div class="final-cta-btns">
+      <a href="#book" class="btn btn-dark">Get the Playbook</a>
+      <a href="#workwithme" class="btn btn-outline-dark">Book a Revenue Gap Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        The Franchise
+        <span>Profit Playbook</span>
+        <p style="font-family:var(--sans);font-size:0.75rem;color:rgba(255,255,255,0.35);font-weight:400;margin-top:6px;">Mary Pillow Thompson</p>
+      </div>
+      <div class="footer-links">
+        <a href="#book">The Book</a>
+        <a href="#framework">The Framework</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About</a>
+        <a href="#workwithme">Work With Me</a>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mary Pillow Thompson · The Franchise Profit Playbook. All rights reserved.</p>
+      <p style="font-size:0.75rem;">thefranchiseprofitplaybook.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    document.getElementById('navMobile').classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
