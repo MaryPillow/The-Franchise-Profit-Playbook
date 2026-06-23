@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home1/menuwit1/public_html/thefranchiseprofitplaybook.com
     - /bin/cp index.html $DEPLOYPATH/index.html
     - /bin/cp headshot.jpg $DEPLOYPATH/headshot.jpg
+    - /bin/cp favicon.svg $DEPLOYPATH/favicon.svg
