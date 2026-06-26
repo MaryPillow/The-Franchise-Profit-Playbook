@@ -5,3 +5,6 @@ deployment:
     - /bin/cp index.html $DEPLOYPATH/index.html
     - /bin/cp headshot.jpg $DEPLOYPATH/headshot.jpg
     - /bin/cp favicon.svg $DEPLOYPATH/favicon.svg
+    - /bin/mkdir -p $DEPLOYPATH/blog
+    - /bin/cp blog/index.html $DEPLOYPATH/blog/index.html
+    - /bin/cp blog/you-dont-need-better-people.html $DEPLOYPATH/blog/you-dont-need-better-people.html

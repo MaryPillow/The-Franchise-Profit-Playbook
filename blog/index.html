@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | The Franchise Profit Playbook</title>
+  <meta name="description" content="Operational insights for franchise operators from Mary Pillow Thompson — clarity, execution, and feedback systems that move revenue." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:   #1a1a1a;
+      --gold:    #C9A84C;
+      --gold-lt: #e8c96a;
+      --cream:   #f5f0e8;
+      --cream-dk:#ede7d9;
+      --white:   #ffffff;
+      --gray:    #6b6b6b;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Instrument Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--black); background: var(--white); line-height: 1.6; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--black);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between; height: 68px;
+    }
+    .nav-logo { font-family: var(--serif); font-size: 1rem; color: var(--white); font-weight: 600; line-height: 1.1; }
+    .nav-logo span { color: var(--gold); font-style: italic; display: block; font-size: 0.8rem; font-weight: 400; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-links .nav-cta { background: var(--gold); color: var(--black); padding: 9px 20px; border-radius: 2px; font-weight: 600; }
+    .nav-links .nav-cta:hover { background: var(--gold-lt); color: var(--black); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); }
+    .nav-mobile { display: none; background: var(--black); border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 24px 24px; }
+    .nav-mobile a { display: block; color: rgba(255,255,255,0.8); font-size: 0.9rem; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); letter-spacing: 0.05em; }
+    .nav-mobile a:last-child { border-bottom: none; color: var(--gold); font-weight: 600; }
+    .nav-mobile.open { display: block; }
+
+    /* ── HERO STRIP ── */
+    .blog-hero {
+      background: var(--black);
+      padding: 72px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .blog-hero-inner { position: relative; }
+    .blog-eyebrow {
+      font-family: var(--sans); font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    .blog-hero h1 {
+      font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.6rem);
+      color: var(--white); font-weight: 700; line-height: 1.1; margin-bottom: 16px;
+    }
+    .blog-hero h1 em { color: var(--gold); font-style: italic; }
+    .blog-hero p { color: rgba(255,255,255,0.6); font-size: 1rem; max-width: 520px; line-height: 1.7; }
+
+    /* ── POST GRID ── */
+    .blog-main { padding: 72px 0 96px; background: var(--cream); }
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 72px;
+    }
+    .post-card {
+      background: var(--white);
+      border-radius: 2px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+      border-bottom: 3px solid transparent;
+    }
+    .post-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+      border-bottom-color: var(--gold);
+    }
+    .post-card-body { padding: 32px 28px; flex-grow: 1; display: flex; flex-direction: column; }
+    .post-meta {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .post-category {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--gold);
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 2px;
+    }
+    .post-date { font-size: 0.78rem; color: var(--gray); }
+    .post-card h2 {
+      font-family: var(--serif); font-size: 1.35rem; font-weight: 700;
+      color: var(--black); line-height: 1.2; margin-bottom: 12px;
+    }
+    .post-card p {
+      font-size: 0.88rem; color: var(--gray); line-height: 1.7;
+      flex-grow: 1; margin-bottom: 24px;
+    }
+    .post-read-more {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      display: flex; align-items: center; gap: 6px;
+      transition: gap 0.2s;
+    }
+    .post-card:hover .post-read-more { gap: 10px; }
+
+    /* Coming Soon card */
+    .post-card-soon {
+      background: var(--cream-dk);
+      border: 2px dashed rgba(201,168,76,0.3);
+      padding: 32px 28px;
+      display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+      min-height: 220px;
+    }
+    .post-card-soon p { font-size: 0.82rem; color: var(--gray); font-style: italic; margin-top: 8px; }
+    .soon-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(201,168,76,0.5); margin-bottom: 10px;
+    }
+    .post-card-soon h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--black); opacity: 0.5; }
+
+    /* ── KIT FORM SECTION ── */
+    .kit-section {
+      background: var(--black);
+      border-radius: 4px;
+      padding: 56px 48px;
+      text-align: center;
+    }
+    .kit-section .kit-label {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px;
+    }
+    .kit-section h2 {
+      font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--white); margin-bottom: 12px;
+    }
+    .kit-section p { color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1.7; max-width: 480px; margin: 0 auto 32px; }
+    .kit-embed-placeholder {
+      background: rgba(255,255,255,0.05);
+      border: 1px dashed rgba(201,168,76,0.3);
+      border-radius: 4px;
+      padding: 32px;
+      max-width: 480px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    /* ── FOOTER ── */
+    footer { background: #111; padding: 48px 0 32px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+    .footer-logo { font-family: var(--serif); font-size: 1.1rem; color: var(--white); font-weight: 600; line-height: 1.2; }
+    .footer-logo span { display: block; font-style: italic; color: var(--gold); font-size: 0.85rem; font-weight: 400; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 20px; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .posts-grid { grid-template-columns: 1fr; }
+      .kit-section { padding: 40px 24px; }
+    }
+    @media (max-width: 640px) {
+      .posts-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">
+      The Franchise<span>Profit Playbook</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#book">Book</a>
+      <a href="../index.html#courses">Courses</a>
+      <a href="../index.html#about">About</a>
+      <a href="index.html" class="active">Blog</a>
+      <a href="../index.html#workwithme">Work With Me</a>
+      <a href="https://calendar.app.google/Yi9o2aagVa8aUGHL7" target="_blank" class="nav-cta">Book a Call</a>
+    </div>
+    <div class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="../index.html#book" onclick="toggleNav()">The Book</a>
+    <a href="../index.html#courses" onclick="toggleNav()">Courses</a>
+    <a href="../index.html#about" onclick="toggleNav()">About</a>
+    <a href="index.html" onclick="toggleNav()">Blog</a>
+    <a href="../index.html#workwithme" onclick="toggleNav()">Work With Me</a>
+    <a href="https://calendar.app.google/Yi9o2aagVa8aUGHL7" target="_blank" onclick="toggleNav()">Book a Revenue Gap Call →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="container blog-hero-inner">
+    <p class="blog-eyebrow">From the Desk of Mary Pillow Thompson</p>
+    <h1>Insights for <em>Franchise Operators</em></h1>
+    <p>Operational frameworks, field-tested observations, and straight talk on what actually separates growing locations from grinding ones.</p>
+  </div>
+</section>
+
+<!-- POSTS -->
+<section class="blog-main">
+  <div class="container">
+    <div class="posts-grid">
+
+      <!-- Post 1 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Operations</span>
+            <span class="post-date">June 2026</span>
+          </div>
+          <h2>You Don't Need Better People. You Need a Better Game.</h2>
+          <p>Every operator has said it. "If I could just find better people, everything would run smoother." It's one of the most common refrains in franchise operations — and it's almost never the real problem.</p>
+          <a href="you-dont-need-better-people.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Coming soon placeholders -->
+      <div class="post-card post-card-soon">
+        <p class="soon-label">Coming Soon</p>
+        <h3>Culture Is Not a Speech. It's Visibility.</h3>
+        <p>Next post — check back soon.</p>
+      </div>
+
+      <div class="post-card post-card-soon">
+        <p class="soon-label">Coming Soon</p>
+        <h3>Your Problem Isn't Lack of Tools. It's Too Many.</h3>
+        <p>Next post — check back soon.</p>
+      </div>
+
+    </div>
+
+    <!-- KIT EMAIL FORM -->
+    <div class="kit-section">
+      <p class="kit-label">Stay in the Game</p>
+      <h2>Get new posts delivered to your inbox.</h2>
+      <p>Operational insights for franchise operators — no noise, no pitch. Just frameworks you can install immediately.</p>
+      <!-- PASTE KIT FORM EMBED HERE -->
+      <div class="kit-embed-placeholder">
+        Paste your Kit form embed code here.<br>
+        Kit Dashboard → Grow → Forms → [Your Form] → Embed
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        The Franchise<span>Profit Playbook</span>
+        <p style="font-family:var(--sans);font-size:0.75rem;color:rgba(255,255,255,0.35);font-weight:400;margin-top:6px;">Mary Pillow Thompson</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html#book">The Book</a>
+        <a href="../index.html#courses">Courses</a>
+        <a href="index.html">Blog</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#workwithme">Work With Me</a>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mary Pillow Thompson · The Franchise Profit Playbook. All rights reserved.</p>
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);">thefranchiseprofitplaybook.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    document.getElementById('navMobile').classList.toggle('open');
+  }
+</script>
+</body>
+</html>
