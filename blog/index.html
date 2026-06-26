@@ -129,21 +129,6 @@
     }
     .post-card:hover .post-read-more { gap: 10px; }
 
-    /* Coming Soon card */
-    .post-card-soon {
-      background: var(--cream-dk);
-      border: 2px dashed rgba(201,168,76,0.3);
-      padding: 32px 28px;
-      display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
-      min-height: 220px;
-    }
-    .post-card-soon p { font-size: 0.82rem; color: var(--gray); font-style: italic; margin-top: 8px; }
-    .soon-label {
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(201,168,76,0.5); margin-bottom: 10px;
-    }
-    .post-card-soon h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--black); opacity: 0.5; }
-
     /* ── KIT FORM SECTION ── */
     .kit-section {
       background: var(--black);
@@ -166,17 +151,6 @@
       margin: 0 auto !important;
       text-align: left;
     }
-    .kit-embed-placeholder {
-      background: rgba(255,255,255,0.05);
-      border: 1px dashed rgba(201,168,76,0.3);
-      border-radius: 4px;
-      padding: 32px;
-      max-width: 480px;
-      margin: 0 auto;
-      color: rgba(255,255,255,0.3);
-      font-size: 0.8rem;
-      font-style: italic;
-    }
 
     /* ── FOOTER ── */
     footer { background: #111; padding: 48px 0 32px; }
@@ -194,7 +168,7 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
-      .posts-grid { grid-template-columns: 1fr; }
+      .posts-grid { grid-template-columns: 1fr 1fr; }
       .kit-section { padding: 40px 24px; }
     }
     @media (max-width: 640px) {
@@ -246,7 +220,33 @@
   <div class="container">
     <div class="posts-grid">
 
-      <!-- Post 1 -->
+      <!-- Jun 17, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Operations</span>
+            <span class="post-date">June 17, 2026</span>
+          </div>
+          <h2>The 3 Things That DON'T Increase Sales — And the 5 Things That DO</h2>
+          <p>Operators try a lot of things to move revenue. Most don't work. Here's what the data — and real operational experience — actually shows.</p>
+          <a href="3-things-that-dont-increase-sales.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Jun 12, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Operations</span>
+            <span class="post-date">June 12, 2026</span>
+          </div>
+          <h2>Why Your $85 SPLH Target Is Mathematically Impossible — And What to Use Instead</h2>
+          <p>A flat SPLH target that doesn't vary by daypart isn't a real operational tool. Here's how to build one that actually is.</p>
+          <a href="why-your-splh-target-is-impossible.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Jun 2026 (existing post) -->
       <article class="post-card">
         <div class="post-card-body">
           <div class="post-meta">
@@ -254,23 +254,127 @@
             <span class="post-date">June 2026</span>
           </div>
           <h2>You Don't Need Better People. You Need a Better Game.</h2>
-          <p>Every operator has said it. "If I could just find better people, everything would run smoother." It's one of the most common refrains in franchise operations — and it's almost never the real problem.</p>
+          <p>Every operator has said it. "If I could just find better people…" It's one of the most common refrains in franchise operations — and it's almost never the real problem.</p>
           <a href="you-dont-need-better-people.html" class="post-read-more">Read More →</a>
         </div>
       </article>
 
-      <!-- Coming soon placeholders -->
-      <div class="post-card post-card-soon">
-        <p class="soon-label">Coming Soon</p>
-        <h3>Culture Is Not a Speech. It's Visibility.</h3>
-        <p>Next post — check back soon.</p>
-      </div>
+      <!-- May 5, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Leadership</span>
+            <span class="post-date">May 5, 2026</span>
+          </div>
+          <h2>Your Employees Are Either Your Revenue Engine or Your Biggest Missed Opportunity</h2>
+          <p>Your frontline team is not a cost center. They are the primary mechanism through which revenue is generated — or lost.</p>
+          <a href="your-employees-are-your-revenue-engine.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
 
-      <div class="post-card post-card-soon">
-        <p class="soon-label">Coming Soon</p>
-        <h3>Your Problem Isn't Lack of Tools. It's Too Many.</h3>
-        <p>Next post — check back soon.</p>
-      </div>
+      <!-- Apr 30, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Growth</span>
+            <span class="post-date">April 30, 2026</span>
+          </div>
+          <h2>You're Not Ready to Open a Second Store</h2>
+          <p>The question isn't whether you can afford a second location. It's whether your first one can run without you.</p>
+          <a href="youre-not-ready-to-open-a-second-store.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Apr 21, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Leadership</span>
+            <span class="post-date">April 21, 2026</span>
+          </div>
+          <h2>Consistency</h2>
+          <p>Consistency is not a personality trait you hire for. It is an output of deliberate design — and most locations are missing the systems that produce it.</p>
+          <a href="consistency.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Apr 14, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Operations</span>
+            <span class="post-date">April 14, 2026</span>
+          </div>
+          <h2>The Operating System Behind Every Winning Shift</h2>
+          <p>Great shifts don't happen by accident. They run on a three-part operating system — and you can install it in any location.</p>
+          <a href="the-operating-system-behind-every-winning-shift.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Apr 8, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Operations</span>
+            <span class="post-date">April 8, 2026</span>
+          </div>
+          <h2>Where the Day Is Actually Won</h2>
+          <p>Most operators think the day is won in the rush. It isn't. The day is won in the thirty minutes before the first customer walks in.</p>
+          <a href="where-the-day-is-actually-won.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Mar 23, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Culture</span>
+            <span class="post-date">March 23, 2026</span>
+          </div>
+          <h2>The Store You Think You're Running Isn't the One Your Team Is Experiencing</h2>
+          <p>There is a gap between the store you see as the owner and the store your team actually experiences. That gap is costing you more than you know.</p>
+          <a href="the-store-you-think-youre-running.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Mar 12, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Operations</span>
+            <span class="post-date">March 12, 2026</span>
+          </div>
+          <h2>Why Some Shifts Produce $500 More Than Others</h2>
+          <p>Same store. Same menu. Same team size. $500 difference. It comes down to three conditions — and none of them is customer count.</p>
+          <a href="why-some-shifts-produce-500-more.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Mar 3, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Leadership</span>
+            <span class="post-date">March 3, 2026</span>
+          </div>
+          <h2>The Behavior Lever That Actually Moves Volume</h2>
+          <p>Most operators reach for promotions or motivation speeches when sales are flat. The lever that actually works is simpler — and it starts with information.</p>
+          <a href="the-behavior-lever-that-moves-volume.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Feb 11, 2026 -->
+      <article class="post-card">
+        <div class="post-card-body">
+          <div class="post-meta">
+            <span class="post-category">Operations</span>
+            <span class="post-date">February 11, 2026</span>
+          </div>
+          <h2>Why Labor % Is Lying to You</h2>
+          <p>Labor percentage is the most commonly watched number in franchise operations. And it's leading a lot of operators in exactly the wrong direction.</p>
+          <a href="why-labor-percent-is-lying-to-you.html" class="post-read-more">Read More →</a>
+        </div>
+      </article>
 
     </div>
 

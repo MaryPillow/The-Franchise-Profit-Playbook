@@ -8,3 +8,14 @@ deployment:
     - /bin/mkdir -p $DEPLOYPATH/blog
     - /bin/cp blog/index.html $DEPLOYPATH/blog/index.html
     - /bin/cp blog/you-dont-need-better-people.html $DEPLOYPATH/blog/you-dont-need-better-people.html
+    - /bin/cp blog/why-labor-percent-is-lying-to-you.html $DEPLOYPATH/blog/why-labor-percent-is-lying-to-you.html
+    - /bin/cp blog/the-behavior-lever-that-moves-volume.html $DEPLOYPATH/blog/the-behavior-lever-that-moves-volume.html
+    - /bin/cp blog/why-some-shifts-produce-500-more.html $DEPLOYPATH/blog/why-some-shifts-produce-500-more.html
+    - /bin/cp blog/the-store-you-think-youre-running.html $DEPLOYPATH/blog/the-store-you-think-youre-running.html
+    - /bin/cp blog/where-the-day-is-actually-won.html $DEPLOYPATH/blog/where-the-day-is-actually-won.html
+    - /bin/cp blog/the-operating-system-behind-every-winning-shift.html $DEPLOYPATH/blog/the-operating-system-behind-every-winning-shift.html
+    - /bin/cp blog/consistency.html $DEPLOYPATH/blog/consistency.html
+    - /bin/cp blog/youre-not-ready-to-open-a-second-store.html $DEPLOYPATH/blog/youre-not-ready-to-open-a-second-store.html
+    - /bin/cp blog/your-employees-are-your-revenue-engine.html $DEPLOYPATH/blog/your-employees-are-your-revenue-engine.html
+    - /bin/cp blog/why-your-splh-target-is-impossible.html $DEPLOYPATH/blog/why-your-splh-target-is-impossible.html
+    - /bin/cp blog/3-things-that-dont-increase-sales.html $DEPLOYPATH/blog/3-things-that-dont-increase-sales.html
