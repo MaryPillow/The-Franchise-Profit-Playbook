@@ -19,3 +19,4 @@ deployment:
     - /bin/cp blog/your-employees-are-your-revenue-engine.html $DEPLOYPATH/blog/your-employees-are-your-revenue-engine.html
     - /bin/cp blog/why-your-splh-target-is-impossible.html $DEPLOYPATH/blog/why-your-splh-target-is-impossible.html
     - /bin/cp blog/3-things-that-dont-increase-sales.html $DEPLOYPATH/blog/3-things-that-dont-increase-sales.html
+    - /bin/cp blog/3-conditions-every-high-performing-shift-has.html $DEPLOYPATH/blog/3-conditions-every-high-performing-shift-has.html
