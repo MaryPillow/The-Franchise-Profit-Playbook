@@ -21,3 +21,4 @@ deployment:
     - /bin/cp blog/3-things-that-dont-increase-sales.html $DEPLOYPATH/blog/3-things-that-dont-increase-sales.html
     - /bin/cp blog/3-conditions-every-high-performing-shift-has.html $DEPLOYPATH/blog/3-conditions-every-high-performing-shift-has.html
     - /bin/cp blog/the-game-inside-the-store.html $DEPLOYPATH/blog/the-game-inside-the-store.html
+    - /bin/cp blog/rss.xml $DEPLOYPATH/blog/rss.xml
