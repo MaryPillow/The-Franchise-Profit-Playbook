@@ -23,3 +23,4 @@ deployment:
     - /bin/cp blog/the-game-inside-the-store.html $DEPLOYPATH/blog/the-game-inside-the-store.html
     - /bin/cp blog/rss.xml $DEPLOYPATH/blog/rss.xml
     - /bin/cp blog/the-2-an-hour-raise-that-cut-one-operator-s-labor-costs-by-2.html $DEPLOYPATH/blog/the-2-an-hour-raise-that-cut-one-operator-s-labor-costs-by-2.html
+    - /bin/cp blog/he-baked-1-000-croissants-a-day-he-sold-100.html $DEPLOYPATH/blog/he-baked-1-000-croissants-a-day-he-sold-100.html
