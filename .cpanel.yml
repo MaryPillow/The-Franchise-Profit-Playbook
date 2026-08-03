@@ -25,3 +25,4 @@ deployment:
     - /bin/cp blog/the-2-an-hour-raise-that-cut-one-operator-s-labor-costs-by-2.html $DEPLOYPATH/blog/the-2-an-hour-raise-that-cut-one-operator-s-labor-costs-by-2.html
     - /bin/cp blog/he-baked-1-000-croissants-a-day-he-sold-100.html $DEPLOYPATH/blog/he-baked-1-000-croissants-a-day-he-sold-100.html
     - /bin/cp blog/the-1-400-a-day-leak-fred-found-in-his-own-dumpsters.html $DEPLOYPATH/blog/the-1-400-a-day-leak-fred-found-in-his-own-dumpsters.html
+    - /bin/cp blog/the-10-000-a-month-leak-two-extra-line-cooks-were-hiding.html $DEPLOYPATH/blog/the-10-000-a-month-leak-two-extra-line-cooks-were-hiding.html
